@@ -1,0 +1,17 @@
+/TODO
+# 忽略 build/ 文件夹下的所有文件
+build/
+#忽略build文件夹下的所有文件，但不包括build文件夹本身
+build/*
+# 忽略 doc/notes.txt, 不包括 doc/server/arch.txt
+doc/*.txt
+# 忽略所有的 .pdf 文件 在 doc/ directory 下的
+doc/**/*.pdf
+
+# clion 产生的编译目录
+cmake-build-debug/
+cmake-build-release/
+ 
+# vscode 产生的缓存文件
+.vscode/
+ 

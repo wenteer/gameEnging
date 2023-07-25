@@ -1,0 +1,28 @@
+# 检查cmake的最低版本
+cmake_minimum_required(VERSION 3.10.0)
+
+# 设置在VS中建立文件夹
+SET_PROPERTY( GLOBAL PROPERTY USE_FOLDERS ON )
+
+# 定义工程名称
+project(HeliumEngine)
+
+#添加依赖的头文件
+include_directories("./include")
+link_directories("./lib")
+
+#收集文件
+file(GLOB_RECURSE src_dir
+"./src/*.cpp"
+"./src/*.c"
+"./src/*.h"
+)
+
+#生成可执行程序
+add_executable(${PROJECT_NAME} ${src_dir})
+
+#此处添加依赖库
+target_link_libraries(${PROJECT_NAME}
+    glfw3
+    opengl32
+)
