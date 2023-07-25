@@ -5,7 +5,7 @@
 
 #include <helium/TexUtils2D.h>
 #include <helium/ShaderUtils.h>
-
+ 
 class Sprite {
 public:
     //* Constructor (inits shaders/shapes)
